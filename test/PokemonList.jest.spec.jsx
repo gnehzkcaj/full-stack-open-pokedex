@@ -3,6 +3,8 @@ import { render, screen } from '@testing-library/react'
 import { BrowserRouter } from 'react-router-dom'
 import '@testing-library/jest-dom'
 import PokemonList from '../src/PokemonList'
+import { describe, it } from '@jest/globals'
+import { expect } from '@testing-library/jest-dom'
 
 // eslint-disable no-undef
 const pokemonList = [{
