@@ -18,4 +18,4 @@ jobs:
       - name: Install ESlint 
         run: npm install --save-dev @stylistic/eslint-plugin-js 
       - name: Check style
-        run: npm run eslint
+        run: npm run eslint --fix
