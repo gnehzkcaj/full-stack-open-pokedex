@@ -4,7 +4,7 @@ import { BrowserRouter } from 'react-router-dom'
 import '@testing-library/jest-dom'
 import PokemonList from '../src/PokemonList'
 
-
+// eslint-disable no-undef
 const pokemonList = [{
   url: 'https://pokeapi.co/api/v2/pokemon/1/',
   name: 'bulbasaur',
