@@ -3,8 +3,7 @@ module.exports = {
     'commonjs': true,
     'es2021': true,
     'node': true,
-    "es6": true,
-    "jest/globals": true
+    'es6': true
   },
   'overrides': [
     {
@@ -20,12 +19,19 @@ module.exports = {
     }
   ],
   'parserOptions': {
-    'ecmaVersion': 'latest'
+    'ecmaFeatures': {
+      'jsx': true
+    },
+    'ecmaVersion': 2018,
+    'sourceType': 'module'
   },
   'plugins': [
     '@stylistic/js'
   ],
-  'extends': 'eslint:recommended',
+  'extends': [
+    'eslint:recommended',
+    'plugin:react/recommended'
+  ],
   'rules': {
     '@stylistic/js/indent': [
       'error',
@@ -51,6 +57,7 @@ module.exports = {
     'arrow-spacing': [
       'error', { 'before': true, 'after': true }
     ],
-    'no-console': 0
+    'no-console': 0,
+    'react/prop-types': 0
   }
 }
