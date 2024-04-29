@@ -6,7 +6,6 @@ import PokemonList from '../src/PokemonList'
 import { describe, it } from '@jest/globals'
 import { expect } from '@testing-library/jest-dom'
 
-// eslint-disable no-undef
 const pokemonList = [{
   url: 'https://pokeapi.co/api/v2/pokemon/1/',
   name: 'bulbasaur',

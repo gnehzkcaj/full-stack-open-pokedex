@@ -7,6 +7,9 @@ import PokemonPage from '../src/PokemonPage'
 
 import { MemoryRouter } from 'react-router-dom'
 
+import { describe, it, jest } from '@jest/globals'
+import { expect } from '@testing-library/jest-dom'
+
 jest.mock('axios')
 
 const pokemonList = {
@@ -130,5 +133,5 @@ describe('<PokemonPage />', () => {
 
     expect(screen.queryByText('Previous')).toBeNull()
     expect(screen.queryByText('Next')).toBeNull()
-  })  
+  })
 })
