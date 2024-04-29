@@ -15,7 +15,9 @@ jobs:
           node-version: '20'
       - name: Install dependencies 
         run: npm install  
-      - name: Install ESlint 
-        run: npm install @stylistic/eslint-plugin-js 
       - name: Check style
         run: npm run eslint 
+      - name: Build
+        run: npm run build
+      - name: Test
+        run: npm run test
