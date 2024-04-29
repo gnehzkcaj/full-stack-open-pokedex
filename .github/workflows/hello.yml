@@ -14,7 +14,7 @@ jobs:
           echo "Hello World! 2024"
       - name: Now it is
         run: |
-          date %A %B %F
+          date 
       - name: Directory content
         run: |
           ls -A
