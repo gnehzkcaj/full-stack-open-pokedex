@@ -1,55 +1,45 @@
 module.exports = {
   "env": {
     "commonjs": true,
-    "node": true,
-    "es6": true,
-    "jest/globals": true
+    "es2021": true,
+    "node": true
   },
-  "extends": [
-    "eslint:recommended",
-    "plugin:react/recommended"
+  "overrides": [
+    {
+      "env": {
+        "node": true
+      },
+      "files": [
+        ".eslintrc.{js,cjs}"
+      ],
+      "parserOptions": {
+        "sourceType": "script"
+      }
+    }
   ],
   "parserOptions": {
-    "ecmaFeatures": {
-      "jsx": true
-    },
-    "ecmaVersion": 2018,
-    "sourceType": "module"
+    "ecmaVersion": "latest"
   },
-  "plugins": [
-    "react", "jest"
+  'plugins': [
+    '@stylistic/js'
   ],
-  settings: {
-    react: {
-      version: 'detect' 
-    }
-  },
-  "rules": {
-    "indent": [
-      "error",
+  'extends': 'eslint:recommended',
+  'rules': {
+    '@stylistic/js/indent': [
+      'error',
       2
     ],
-    "linebreak-style": [
-      "error",
-      "unix"
+    '@stylistic/js/linebreak-style': [
+      'error',
+      'unix'
     ],
-    "quotes": [
-      "error",
-      "single"
+    '@stylistic/js/quotes': [
+      'error',
+      'single'
     ],
-    "semi": [
-      "error",
-      "never"
+    '@stylistic/js/semi': [
+      'error',
+      'never'
     ],
-    "eqeqeq": "error",
-    "no-trailing-spaces": "error",
-    "object-curly-spacing": [
-      "error", "always"
-    ],
-    "arrow-spacing": [
-      "error", { "before": true, "after": true }
-    ],
-    "no-console": "error",
-    "react/prop-types": 0
   }
 }
