@@ -20,3 +20,6 @@ https://full-stack-open-pokedex-afaq.onrender.com
 
 npm run build
 node app.js
+
+##
+(https://stackoverflow.com/questions/56398742/eslint-throws-no-undef-errors-when-linting-jest-test-files)

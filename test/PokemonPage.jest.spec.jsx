@@ -4,10 +4,9 @@ import axiosMock from 'axios'
 import { act } from 'react-dom/test-utils'
 import '@testing-library/jest-dom'
 import PokemonPage from '../src/PokemonPage'
-
 import { MemoryRouter } from 'react-router-dom'
 
-import { describe, it, expect } from '@jest/globals'; // Import the 'describe' function
+import { describe, it, expect } from '@jest/globals'
 
 jest.mock('axios')
 
