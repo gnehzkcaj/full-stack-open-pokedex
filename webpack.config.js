@@ -6,8 +6,8 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, 'dist'),
     filename: 'bundle.js',
-    // publicPath: '/'
-    publicPath: 'https://full-stack-open-pokedex-afaq.onrender.com/'
+    publicPath: '/'
+    //publicPath: 'https://full-stack-open-pokedex-afaq.onrender.com/'
   },
   module: {
     rules: [
