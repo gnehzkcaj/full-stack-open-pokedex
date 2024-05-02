@@ -3,8 +3,7 @@ import { render, screen } from '@testing-library/react'
 import { BrowserRouter } from 'react-router-dom'
 import '@testing-library/jest-dom'
 import PokemonList from '../src/PokemonList'
-import { describe, it } from '@jest/globals'
-import { expect } from '@testing-library/jest-dom'
+
 
 const pokemonList = [{
   url: 'https://pokeapi.co/api/v2/pokemon/1/',
@@ -23,6 +22,7 @@ describe('<PokemonList />', () => {
         <PokemonList pokemonList={pokemonList} />
       </BrowserRouter>
     )
+    screen.debug()
     expect(screen.getByText('bulbasaur')).toBeVisible()
     expect(screen.getByText('eevee')).toBeVisible()
   })
