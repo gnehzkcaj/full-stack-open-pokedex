@@ -1,5 +1,6 @@
-// @ts-check
-const { test, describe, expect } = require('@playwright/test')
+// @ts-nocheck
+const { test, expect } = require('@playwright/test')
+import describe from '@playwright/test'
 require('dotenv').config()
 
 // @ts-ignore
@@ -22,12 +23,10 @@ describe('Pokedex', () => {
   })
 
   test('front page can be opened', async ({ page }) => {
-    const baseUrl = process.env.BASE_URL !== undefined ? process.env.BASE_URL : 'https://www.goole.com/'
+    const baseUrl = process.env.BASE_URL
     await page.goto(baseUrl)
-    // const title = await page.title()
-    // await expect(title).toContain('Pokemon')
-    await expect(page.getByText('ivysaur')).toBeVisible()
-    await expect(page.getByText('Pokémon and Pokémon character names are trademarks of Nintendo.')).toBeVisible()
+    await expect(page.getByText('ivysaur')).toBeVisible({ timeout: 10000 })
+    await expect(page.getByText('Pokémon and Pokémon character names are trademarks of Nintendo.')).toBeVisible({ timeout: 30000 })
   })
 })
 

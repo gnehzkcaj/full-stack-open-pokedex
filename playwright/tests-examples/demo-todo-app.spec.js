@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 // @ts-check
 const { test, expect } = require('@playwright/test')
 
@@ -424,6 +425,7 @@ async function createDefaultTodos(page) {
  */
 async function checkNumberOfTodosInLocalStorage(page, expected) {
   return await page.waitForFunction(e => {
+    // eslint-disable-next-line no-undef
     return JSON.parse(localStorage['react-todos']).length === e
   }, expected)
 }
